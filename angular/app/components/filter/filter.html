@@ -1,0 +1,113 @@
+<div class="card card-refine card-plain card-rose">
+    <div class="card-body">
+        <h4 class="card-title">
+            Refine
+            <button class="btn btn-default btn-fab btn-fab-mini btn-link pull-right" rel="tooltip" title=""
+                    data-original-title="Reset Filter">
+                <i class="material-icons">cached</i>
+            </button>
+        </h4>
+        <div id="accordion" role="tablist">
+            <!--start range-->
+            <div class="card card-collapse">
+                <div class="card-header" role="tab" id="headingOne">
+                    <h5 class="mb-0">
+                        <a data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Price Range
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </a>
+                    </h5>
+                </div>
+                <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="card-body card-refine">
+                        <span id="price-left" class="price-left pull-left" data-currency="€">€42</span>
+                        <span id="price-right" class="price-right pull-right" data-currency="€">€880</span>
+                        <div class="clearfix"></div>
+                        <div id="sliderRefine" class="slider slider-rose noUi-target noUi-ltr noUi-horizontal"></div>
+                    </div>
+                </div>
+            </div>
+            <!--end range-->
+
+            <!--start clothing-->
+            <div class="card card-collapse">
+                <div class="card-header" role="tab" id="headingTwo">
+                    <h5 class="mb-0">
+                        <a class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                           aria-controls="collapseTwo">
+                            Clothing
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </a>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="card-body">
+                        <!--options-->
+
+                        <div class="form-check" ng-repeat="cloth in filterData.clothing">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="" ng-checked={{cloth===filterData.clothing[0]}}>{{cloth}}
+                                <span class="form-check-sign">
+                                    <span class="check"></span>
+                                </span>
+                            </label>
+                        </div>
+                        <!--end-options-->
+                    </div>
+                </div>
+            </div>
+            <!--end clothing-->
+            <!--start-designer-->
+            <div class="card card-collapse">
+                <div class="card-header" role="tab" id="headingThree">
+                    <h5 class="mb-0">
+                        <a class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                           aria-controls="collapseThree">
+                            Designer
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </a>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse show" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="card-body">
+                        <!--start-options-->
+                        <div class="form-check" ng-repeat="designer in filterData.designer">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="" ng-checked={{designer===filterData.designer[0]}}> {{designer}}
+                                <span class="form-check-sign">
+                                    <span class="check"></span>
+                                </span>
+                            </label>
+                        </div>
+                        <!--end-options-->
+                    </div>
+                </div>
+            </div>
+            <!--end-designer-->
+            <!--start-colour-->
+            <div class="card card-collapse">
+                <div class="card-header" role="tab" id="headingFour">
+                    <h5 class="mb-0">
+                        <a class="collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Colour
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </a>
+                    </h5>
+                </div>
+                <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
+                    <div class="card-body">
+                        <div class="form-check" ng-repeat="color in filterData.colors">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="" ng-checked={{color===filterData.colors[0]}}> {{color}}
+                                <span class="form-check-sign">
+                                    <span class="check"></span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end-color-->
+        </div>
+    </div>
+</div>

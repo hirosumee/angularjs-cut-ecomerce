@@ -1,0 +1,88 @@
+<div class="ecommerce">
+    <nav-bar></nav-bar>
+    <headding></headding>
+    <div class="main main-raised">
+        <div class="container">
+            <div class="card card-plain">
+                <div class="card-body">
+                    <h3 class="card-title">Shopping Cart</h3>
+                    <br/>
+                    <div class="table-responsive">
+                        <table class="table table-shopping">
+                            <thead>
+                            <tr>
+                                <th class="text-center"></th>
+                                <th>Product</th>
+                                <th class="th-description">Color</th>
+                                <th class="th-description">Size</th>
+                                <th class="text-right">Price</th>
+                                <th class="text-right">Qty</th>
+                                <th class="text-right">Amount</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="product in products">
+                                <td>
+                                    <div class="img-container">
+                                        <img ng-src={{product.img}} alt="..." />
+                                    </div>
+                                </td>
+                                <td class="td-name">
+                                    <a href="#pants">{{product.name}}</a>
+                                    <br />
+                                    <small>{{product.designer}}</small>
+                                </td>
+                                <td>
+                                    {{product.color}}
+                                </td>
+                                <td>
+                                    {{product.size}}
+                                </td>
+                                <td class="td-number">
+                                    <small>&euro;</small>{{product.price}}
+                                </td>
+                                <td class="td-number">
+                                    {{product.amount}}
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-round btn-info"> <i class="material-icons">remove</i> </button>
+                                        <button class="btn btn-round btn-info"> <i class="material-icons">add</i> </button>
+                                    </div>
+                                </td>
+                                <td class="td-number">
+                                    <small>&euro;</small>998
+                                </td>
+                                <td class="td-actions">
+                                    <button type="button" rel="tooltip" data-placement="left" title="Remove item" class="btn btn-link">
+                                        <i class="material-icons">close</i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"></td>
+                                <td class="td-total">
+                                    Total
+                                </td>
+                                <td colspan="1" class="td-price">
+                                    <small>&euro;</small>{{total}}
+                                </td>
+                                <td colspan="1"></td>
+                                <td colspan="2" class="text-right">
+                                    <button type="button" class="btn btn-info btn-round">Complete Purchase <i class="material-icons">keyboard_arrow_right</i></button>
+                                </td>
+                            </tr>
+                            <!-- <tr>
+                              <td colspan="6"></td>
+                              <td colspan="2" class="text-right">
+                                <button type="button" class="btn btn-info btn-round">Complete Purchase <i class="material-icons">keyboard_arrow_right</i></button>
+                              </td>
+                            </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <custom-footer-two></custom-footer-two>
+</div>

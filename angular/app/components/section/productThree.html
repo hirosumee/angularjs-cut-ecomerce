@@ -1,0 +1,26 @@
+<div class="card card-product">
+    <div class="card-header card-header-image">
+        <a href="#pablo">
+            <img class="img" ng-src={{product.img}}>
+        </a>
+    </div>
+    <div class="card-body">
+        <h6 class="card-category " ng-class="{'text-rose':product.hightlight}">{{product.type}}</h6>
+        <h4 class="card-title">
+            <a href="#pablo">{{product.title}}</a>
+        </h4>
+        <div class="card-description">
+            {{product.description}}
+        </div>
+    </div>
+    <div class="card-footer justify-content-between">
+        <div class="price">
+            <h4>${{product.price}}</h4>
+        </div>
+        <div class="stats">
+            <button type="button" rel="tooltip" title="Saved to Wishlist" class="btn btn-just-icon btn-link btn-rose">
+                <i class="material-icons">favorite</i>
+            </button>
+        </div>
+    </div>
+</div>

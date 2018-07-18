@@ -1,0 +1,58 @@
+<div class="ecommerce">
+    <nav-bar ></nav-bar>
+    <headding></headding>
+    <div class="main main-raised">
+        <div ng-controller="latestOffer">
+            <custom-section title="Latest Offers">
+                <div class="row">
+                    <div class="col-md-4" ng-repeat="product in latestProducts">
+                        <product-type-one product="product"></product-type-one>
+                    </div>
+                </div>
+            </custom-section>
+        </div>
+        <div ng-controller="productController">
+            <custom-section title="Find what you need">
+                <div class="row">
+                    <div class="col-md-3">
+                        <filter filterData="filterData"/>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-md-4" ng-repeat="product in products">
+                                <product-type-two product="product"></product-type-two>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ml-auto mr-auto">
+                            <button rel="tooltip" class="btn btn-rose btn-round" data-original-title="" title="">Load
+                                more...
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <h2 class="section-title">News in fashion</h2>
+                <div class="row">
+                    <div class="col-md-4" ng-repeat="fashion in fashions.small">
+                        <fashion fashion="fashion"></fashion>
+                    </div>
+                    <div class="col-md-6" ng-repeat="fashion in fashions.big">
+                        <fashion fashion="fashion"></fashion>
+                    </div>
+                </div>
+            </custom-section>
+        </div>
+
+    </div>
+    <div ng-controller="articleController">
+        <custom-section class="section-blog" title="Latest Articles">
+            <div class="row">
+                <div class="col-md-4" ng-repeat="article in articles">
+                    <custom-article article="article"></custom-article>
+                </div>
+            </div>
+        </custom-section>
+    </div>
+    <subscribe-line></subscribe-line>
+    <custom-footer></custom-footer>
+</div>

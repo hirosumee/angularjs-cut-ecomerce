@@ -1,0 +1,24 @@
+<div class="card card-product card-plain">
+    <div class="card-header card-header-image">
+        <a href="#pablo">
+            <img ng-src={{product.img}} alt="">
+        </a>
+    </div>
+    <div class="card-body text-center">
+        <h4 class="card-title">
+            <a href="#pablo">{{product.name}}</a>
+        </h4>
+        <p class="card-description">{{product.description}}</p>
+    </div>
+    <div class="card-footer">
+        <div class="price-container">
+            <span class="price price-old"> €{{product.oldPrice}}</span>
+            <span class="price price-new"> €{{product.newPrice}}</span>
+        </div>
+        <div class="stats ml-auto">
+            <button type="button" rel="tooltip" title="" class="btn btn-just-icon btn-link btn-rose" data-original-title="Saved to Wishlist">
+                <i class="material-icons">favorite</i>
+            </button>
+        </div>
+    </div>
+</div>

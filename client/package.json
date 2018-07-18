@@ -1,0 +1,33 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap": "^4.1.1",
+    "moment": "^2.22.2",
+    "react": "^16.4.1",
+    "react-beforeunload": "^1.0.4",
+    "react-custom-scrollbars": "^4.2.1",
+    "react-dom": "^16.4.1",
+    "react-emoji-render": "^0.4.4",
+    "react-files": "^2.4.6",
+    "react-icons": "^2.2.7",
+    "react-notifications": "^1.4.3",
+    "react-progress-bar.js": "^0.2.3",
+    "react-rangeslider": "^2.2.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "reactstrap": "^6.1.0",
+    "simplewebrtc": "^3.0.1",
+    "socket.io-client": "^2.1.1",
+    "webrtc-adapter": "^6.2.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:4000"
+}
